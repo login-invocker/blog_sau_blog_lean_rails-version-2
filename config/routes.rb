@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   post 'my', to: 'home#my'
   get 'login', to: 'login#index'
+  get 'logout', to: 'login#delete'
+
   get 'register', to: 'register#index'
   post 'login', to: 'login#create'
 

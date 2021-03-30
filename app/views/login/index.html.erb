@@ -3,9 +3,12 @@
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="fadeIn first">
+    <%# <div class="fadeIn first">
       <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div>
+    </div> %>
+    <p id="notice">
+        <%= notice %>
+    </p>
 
     <!-- Login Form -->
     <%= form_with url: "/login", method: :post, model: @user do |form| %>
