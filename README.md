@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+mysql2: sudo apt-get install libmysqlclient-dev
 
-Things you may want to cover:
+- Tạo full chức năng:
+    - rails g scaffold posts name:string title:string content:string
+- Tạo database từ file hoặc gặp lỗi "Migrations are pending. To resolve this issue":
+    - bin/rails db:migrate RAILS_ENV=development
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- bundle install

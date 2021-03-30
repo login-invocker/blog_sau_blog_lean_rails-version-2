@@ -1,0 +1,49 @@
+<%= form_with(model: user) do |form| %>
+  <div class="form-group">
+    <div class="input-group">
+      <%= form.text_field :email,
+      class: "form-control", 
+      type: "email", 
+      placeholder: "email" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <%= form.text_field :name,
+      class: "form-control",
+      placeholder: "User name",
+      type: "text" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <%= form.text_field :password,
+      class: "form-control",
+      placeholder: "Password",
+      type: "password"  %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <%= form.text_field :password_confirmation, class: "form-control",
+       placeholder: "confirm pass",
+       type: "password"%>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Đăng kí", class: "btn btn-success btn-block" %>
+  </div>
+
+    <% if user.errors.any? %>
+        <% user.errors.each do |error| %>
+        <div class="alert alert-danger" role="alert">
+        <%= error.full_message %> 
+        </div>
+        <% end %>
+  <% end %>
+
+<% end %>
