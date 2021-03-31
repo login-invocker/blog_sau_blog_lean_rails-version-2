@@ -1,0 +1,37 @@
+<%= render 'layouts/header', h1: "CHuyên mục IT Blog", span: "A Blog content with developer", h4: ""%>
+
+<%@posts.each do |post|%>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+
+          <a href="/posts/<%=post.id%>">
+            <h2 class="post-title">
+              <%= post.title%>
+            </h2>
+          </a>
+            <a href="/<%= Category.find(post.category_id).id%>">
+            <h3 class="post-subtitle">
+              Chuyên mục: <%= Category.find(post.category_id).name%>
+            </h3>
+          </a>
+          
+          <p class="post-meta">Posted by
+            <a href="users/<%=post.user_id%>">
+              <%= User.find(post.user_id).email%>
+            </a>
+             on <%= post.created_at%>
+          </p>
+        </div>
+        <hr>
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<%end%>
+  <hr>

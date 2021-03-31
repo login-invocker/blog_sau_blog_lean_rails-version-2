@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
-
-  post 'my', to: 'home#my'
+  get '/:category_id', to: "home#index"
   get 'login', to: 'login#index'
   get 'logout', to: 'login#delete'
 

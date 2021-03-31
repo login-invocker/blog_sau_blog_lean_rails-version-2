@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
         # if @user == nil
         #     redirect_to '/login/index', :notice => 'You must login first'
         # end
-        puts session[:user_email]
-        puts session[:user_email].class
+
     end
 end

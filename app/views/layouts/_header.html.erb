@@ -1,53 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Chuyên mục IT</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to 'Posts', posts_path,  class:"nav-link" %>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Questions</a>
-        </li>
-      </ul>
-      <%# danh muc %>
+    <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1><%= h1%></h1>
+            <h4><%= h4%></h4>
 
-      <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Danh mục bài viết
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/categories">Profile</a></li>
-            </ul>
+            <span class="subheading"><%= span%></span>
+          </div>
+        </div>
       </div>
-
-      <%# tim kiem %>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-
-      <% if session[:user_email]%>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <%= session[:user_email]%>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">My content</a></li>
-                <li><a class="dropdown-item" href="/posts/new">Viết bài</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/logout">Sign out</a></li>
-              </ul>
-          </li>
-       <% else %>
-          <a href="/login" class="link-secondary">Login</a>/
-          <a href="/register" class="link-secondary">Register</a>
-       <% end %>
-
     </div>
-  </div>
-</nav>
+  </header>
