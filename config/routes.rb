@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   post 'login', to: 'login#create'
 
   get "file", to: 'renderfile#download_pdf'
-  resources :users, :posts
+  resources :users, :posts, :categories
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

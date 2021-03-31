@@ -38,7 +38,7 @@
     <%= form.submit "Đăng kí", class: "btn btn-success btn-block" %>
   </div>
 
-    <% if user.errors.any? %>
+  <% if user.errors.any? %>
         <% user.errors.each do |error| %>
         <div class="alert alert-danger" role="alert">
         <%= error.full_message %> 

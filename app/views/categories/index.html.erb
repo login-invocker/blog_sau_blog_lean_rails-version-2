@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">Create at</th>
+      <th  colspan="2" ></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+        <tr>
+        <th scope="row"><%= link_to category.id, category_path(category) %></th>
+        <td><%= category.name%></td>
+        <td><%= category.created_at%></td>
+        <td><%= link_to "Edit", edit_category_path(category)%></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        </tr>
+    <%end%>
+  </tbody>
+</table>
